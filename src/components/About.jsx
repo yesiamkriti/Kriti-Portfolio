@@ -23,7 +23,7 @@ const ServiceCard = ({ index, title, icon }) => (
       >
         <img
           src={icon}
-          alt='web-development'
+          alt={title}
           className='w-16 h-16 object-contain'
         />
 
@@ -38,29 +38,24 @@ const ServiceCard = ({ index, title, icon }) => (
 const About = () => {
   return (
     <>
-    
-      <motion.div variants={textVariant()}>
-      
+      <div className="flex flex-col items-center mt-20 text-xl">
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={`${styles.sectionHeadText} text-[#eb55a2]`}>Overview</h2>
-      </motion.div>
+      </div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-      >
-      <div style={{ fontFamily: 'Arial, sans-serif', lineHeight: '1.6', padding: '20px', maxWidth: '600px', margin: 'auto' }}>
-      <h1>Hello!</h1>
-      <p>My name is <strong>[Your Name]</strong>, and I am currently a second-year B.Tech student majoring in Computer Science and Engineering. I have a strong passion for technology and a keen interest in software development, particularly in areas such as web development, data structures, and algorithms.</p>
-      <p>Throughout my academic journey so far, I have gained foundational knowledge in various programming languages, including C++, Java, and Python. I have also explored the basics of web development using HTML, CSS, and JavaScript. Recently, I have been delving into more advanced topics like database management, operating systems, and computer networks.</p>
-      <p>In addition to my coursework, I have worked on several projects that have helped me apply my theoretical knowledge to practical scenarios. For instance, I developed a <strong>[brief description of a project, e.g., a task management app using the MERN stack]</strong>, which enhanced my understanding of full-stack development and teamwork.</p>
-      <p>I am an enthusiastic learner, always eager to expand my skills and take on new challenges. I believe in the power of collaboration and am excited about the opportunities to work on innovative projects and internships that can help me grow both professionally and personally.</p>
-      <p>In my free time, I enjoy <strong>[mention any hobbies or interests, e.g., coding challenges, playing chess, reading tech blogs]</strong>, which keep me engaged and motivated.</p>
-      <p>Thank you for taking the time to learn a little about me. I am looking forward to connecting with like-minded individuals and contributing to exciting technological advancements.</p>
-    </div>
-      </motion.p>
+      <div className="flex flex-col items-center mt-8 px-4 lg:px-0">
+        <div className="max-w-4xl text-center" style={{ fontFamily: 'Arial, sans-serif', lineHeight: '1.6' }}>
+          <h1 className="text-2xl font-bold mb-4">Hello!</h1>
+          <p>My name is <strong>Kriti</strong>, and I am currently a Third-year B.Tech student majoring in Computer Science and Engineering. I have a strong passion for technology and a keen interest in software development, particularly in areas such as web development, data structures, and algorithms.</p>
+          <p className="mt-4">Throughout my academic journey so far, I have gained foundational knowledge in various programming languages, including C++, Java, and Python. I have also explored the basics of web development using HTML, CSS, and JavaScript. Recently, I have been delving into more advanced topics like database management, operating systems, and computer networks.</p>
+          <p className="mt-4">In addition to my coursework, I have worked on several projects that have helped me apply my theoretical knowledge to practical scenarios as mention below, which enhanced my understanding of full-stack development and teamwork.</p>
+          <p className="mt-4">I am an enthusiastic learner, always eager to expand my skills and take on new challenges. I believe in the power of collaboration and am excited about the opportunities to work on innovative projects and internships that can help me grow both professionally and personally.</p>
+          <p className="mt-4">In my free time, I enjoy <strong>coding challenges, playing chess, reading tech blogs and listening songs</strong>, which keep me engaged and motivated.</p>
+          <p className="mt-4">Thank you for taking the time to learn a little about me. I am looking forward to connecting with like-minded individuals and contributing to exciting technological advancements.</p>
+        </div>
+      </div>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='mt-20 flex flex-wrap justify-center gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

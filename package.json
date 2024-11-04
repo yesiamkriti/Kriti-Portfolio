@@ -4,8 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://yesiamkriti.github.io/Kriti-Portfolio",
-  
-  
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -26,6 +24,7 @@
     "react-router-dom": "^6.24.0",
     "react-tilt": "^1.0.2",
     "react-vertical-timeline-component": "^3.6.0",
+    "swiper": "^11.1.10",
     "three": "^0.166.1"
   },
   "devDependencies": {

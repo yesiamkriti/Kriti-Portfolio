@@ -1,11 +1,10 @@
-import {motion} from 'framer-motion';
 import { styles } from '../styles';
-import { ComputersCanvas } from './canvas';
+import { ProfileImage } from './canvas';
 
   const Hero = ()=> {
     return (
-      <section className="relative w-full h-screen mx-auto">
-        <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
+      <section className="relative w-full h-screen mx-auto mb-30">
+        <div className={`${styles.paddingX} relative inset-0  top-[120px] max-w-10xl mx-auto flex flex-row items-start gap-4`}>
 
           <div className='flex flex-col justify-center items-center mt-5'>
             <div className='w-5 h-5 rounded-full bg-customStart'/>
@@ -13,17 +12,19 @@ import { ComputersCanvas } from './canvas';
           </div>
 
           <div>
-            <h1 className={`${styles.heroHeadText}text-white`}>Hi &nbsp; I'm <span className='text-[] bg-customStart rounded-xl p-1 hover:bg-primary'>Kriti Singh</span> </h1>
-
-            <p className={`${styles.heroSubText} mt-5 text-white-100`}>
-            Computer Science Engineer <span className='sm-block hidden text-6xl'>Lovely Professional University</span><span className='sm:block hidden text-xl'>2022 - 2026</span>
-           
+            <h1 className={`${styles.heroHeadText}text-white`}>Hi &nbsp; I'm <span className='text-[]  rounded-xl hover:bg-primary p-2'>Kriti</span> </h1>
+            <span className='sm-block text-4xl text-white'>Lovely Professional University</span> 
+            <p className={`${styles.heroSubText} mt-4 text-white-100`}>
+            Computer Science Engineer  
+            <span className='sm:block hidden text-xl'>2022 - 2026</span>
           </p>
           </div>
         </div>
-              <div className="absolute bottom-0 w-full h-[700px]"> 
-        <ComputersCanvas className="w-full h-full" />
-      </div>
+        <div className="absolute bottom-20 right-0 left-0 flex justify-center w-full h-[200px]">
+          <ProfileImage />
+        </div>
+
+       
       </section>
     )
   }
